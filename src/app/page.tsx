@@ -1,7 +1,11 @@
-import { getCampaigns } from "./actions/advertisers";
+import ProductList from '@/components/ProductList';
+import { getPragueProducts } from './actions/product';
 
 export default async function Home() {
-  const data = await getCampaigns();
-  console.log(data);
-  return <main></main>;
+  const products = await getPragueProducts()
+  return (
+    <main>
+      <ProductList products={products} />
+    </main>
+  );
 }
