@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Produktový portál",
-  description: "Srovnáve produkty. Nebo jsme možná kuponový portál? Či cashback portál?",
+  description:
+    "Srovnáve produkty. Nebo jsme možná kuponový portál? Či cashback portál?",
 };
 
 export default function RootLayout({

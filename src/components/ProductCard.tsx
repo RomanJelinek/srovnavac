@@ -1,29 +1,42 @@
-import { FC } from 'react';
-import { Product } from '@/libs/supabase/supabase.types';
+"use client";
+
+import { Product } from "@/libs/supabase/supabase.types";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import useSlug from "@/hooks/useSlug";
 
 type ProductCardProps = {
   product: Product;
 };
 
-const ProductCard: FC<ProductCardProps> = ({ product }) => {
+const ProductCard = ({ product }: ProductCardProps) => {
+  const router = useRouter();
+  const { createSlug } = useSlug();
+  const cardLink = `zazitek/${createSlug(product.product)}/${product.item_id}`;
+
   return (
     <>
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-          <img
+      <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <Link href={cardLink}>
+          <Image
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
             className="rounded-t-lg"
-            src={product?.images[0]}
+            src={product?.image}
             alt={product.product}
           />
-        </a>
+        </Link>
         <div className="p-5">
-          <a href="#">
+          <Link href={cardLink}>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {product.product}
             </h5>
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href={cardLink}
             className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Více informací
@@ -42,7 +55,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
                 d="M1 5h12m0 0L9 1m4 4L9 9"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </>
