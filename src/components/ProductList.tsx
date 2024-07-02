@@ -1,5 +1,4 @@
 import ProductCard from "./ProductCard";
-import { Product } from "@/libs/supabase/supabase.types";
 import { getPragueProducts } from "@/app/actions/product";
 
 const ProductList = async () => {
