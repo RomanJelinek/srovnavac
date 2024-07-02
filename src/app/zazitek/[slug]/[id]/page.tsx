@@ -1,6 +1,24 @@
 import { getPragueProductById } from "@/app/actions/productStatic";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string; id: string };
+}): Promise<Metadata> {
+  const { slug, id } = params;
+  const product = await getPragueProductById(id);
+
+  return {
+    title: product.product,
+    keywords: [product.type, product.subtype, product.product, "Praha"],
+    openGraph: {
+      images: [...product.images],
+    },
+  };
+}
 
 export default async function ProductPage({
   params,
