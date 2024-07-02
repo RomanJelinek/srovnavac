@@ -12,9 +12,10 @@ export type Product = {
   description: string;
   price: number;
   manufacturer: string;
-  params: any
+  params: string[];
   created_at: string;
   updated_at: string;
   city: string;
   type: string;
-}
+  subtype: string;
+};
