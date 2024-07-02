@@ -11,7 +11,6 @@ type ProductCardProps = {
 };
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const router = useRouter();
   const { createSlug } = useSlug();
   const cardLink = `zazitek/${createSlug(product.product)}/${product.item_id}`;
 
