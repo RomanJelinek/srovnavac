@@ -1,6 +1,5 @@
 import { getPragueProductById } from "@/app/actions/productStatic";
 import Image from "next/image";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 
 export default async function ProductPage({
@@ -29,7 +28,7 @@ export default async function ProductPage({
             <p className="text-gray-600 mb-4">{product.description}</p>
             <div className="flex items-center mb-4">
               <span className="text-xl font-semibold text-gray-900 mr-2">
-                {product.price.toFixed(2)} Kč
+                {Number(product.price).toLocaleString("cs-CZ")} Kč
               </span>
             </div>
             <div>
