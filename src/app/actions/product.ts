@@ -1,4 +1,4 @@
-import { supabase } from "@/libs/supabase/supabase.server";
+import { supabase } from "@/libs/supabase/supabase.client";
 import { Product } from "@/libs/supabase/supabase.types";
 
 export const getPragueProducts = async (): Promise<Product[]> => {
