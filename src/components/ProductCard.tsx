@@ -3,7 +3,6 @@
 import { Product } from "@/libs/supabase/supabase.types";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import useSlug from "@/hooks/useSlug";
 
 type ProductCardProps = {
