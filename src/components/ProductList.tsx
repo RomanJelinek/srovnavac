@@ -1,6 +1,5 @@
-import { FC } from 'react';
-import ProductCard from './ProductCard';
-import { getPragueProducts } from '@/app/actions/product';
+import ProductCard from "./ProductCard";
+import { getPragueProducts } from "@/app/actions/product";
 
 type ProductListProps = {
   filters?: {
@@ -9,7 +8,7 @@ type ProductListProps = {
   };
 };
 
-const ProductList: FC<ProductListProps> = async ({ filters }) => {
+const ProductList = async ({ filters }: ProductListProps) => {
   const products = await getPragueProducts(filters);
 
   return (

@@ -2,6 +2,7 @@ import { getPragueProductById } from "@/app/actions/productStatic";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import ImageGallery from "@/components/ImageGallery";
 
 export async function generateMetadata({
   params,
@@ -72,18 +73,7 @@ export default async function ProductPage({
       </div>
       <div className="mt-12">
         <h2 className="text-xl font-bold mb-4">Další ukázky</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {product.images.map((img, index) => (
-            <Image
-              key={index}
-              src={img}
-              alt={`Product Image ${index + 1}`}
-              width={200}
-              height={200}
-              className="rounded-lg"
-            />
-          ))}
-        </div>
+        <ImageGallery images={product.images} />
       </div>
     </div>
   );
