@@ -1,12 +1,12 @@
 "use client";
 
-import { FC, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { categories } from "@/constants/categories";
 
-const Navbar: FC = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
