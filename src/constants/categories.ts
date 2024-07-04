@@ -1,3 +1,15 @@
+const allowedTypes = [
+  'Auto-moto',
+  'Sport',
+  'Vzduch',
+  'Únikové hry',
+  'Gastronomické zážitky',
+  'Netradiční',
+  'Relax',
+  'Pobyty',
+  'Adrenalin',
+];
+
 export const categories = [
   {
     type: 'Auto-moto',
@@ -156,64 +168,6 @@ export const categories = [
         url: 'adrenalin-ve-vzduchu-v-praze',
         description:
           'Prožijte adrenalinová dobrodružství ve vzduchu, jako je paragliding nebo skoky padákem.',
-      },
-    ],
-  },
-  {
-    type: 'Kurzy',
-    headline: 'Kurzy v Praze',
-    url: 'kurzy-v-praze',
-    description:
-      'Objevte různé kurzy v Praze, které vám umožní rozšířit své dovednosti a znalosti.',
-    subtypes: [
-      {
-        subtype: 'Fotografické kurzy',
-        headline: 'Fotografické kurzy v Praze',
-        url: 'fotograficke-kurzy-v-praze',
-        description:
-          'Naučte se základy i pokročilé techniky fotografování na našich kurzech v Praze.',
-      },
-      {
-        subtype: 'Taneční kurzy',
-        headline: 'Taneční kurzy v Praze',
-        url: 'tanecni-kurzy-v-praze',
-        description:
-          'Objevte radost z tance a zlepšete své taneční dovednosti na našich kurzech.',
-      },
-      {
-        subtype: 'Gurmánské kurzy',
-        headline: 'Gurmánské kurzy v Praze',
-        url: 'gurmanske-kurzy-v-praze',
-        description:
-          'Zlepšete své kuchařské dovednosti a naučte se vařit lahodné pokrmy na našich gurmánských kurzech.',
-      },
-      {
-        subtype: 'Kurzy vaření',
-        headline: 'Kurzy vaření v Praze',
-        url: 'kurzy-vareni-v-praze',
-        description:
-          'Připojte se k našim kurzům vaření a naučte se připravovat chutné a zdravé jídlo.',
-      },
-      {
-        subtype: 'Kurzy',
-        headline: 'Kurzy v Praze',
-        url: 'kurzy-v-praze',
-        description:
-          'Najděte širokou škálu kurzů v Praze od vaření až po umění a řemesla.',
-      },
-      {
-        subtype: 'Pivní kurzy',
-        headline: 'Pivní kurzy v Praze',
-        url: 'pivni-kurzy-v-praze',
-        description:
-          'Naučte se vše o pivu od jeho vaření až po správné servírování na našich pivních kurzech.',
-      },
-      {
-        subtype: 'Barmanské a baristické kurzy',
-        headline: 'Barmanské a baristické kurzy v Praze',
-        url: 'barmanske-a-baristicke-kurzy-v-praze',
-        description:
-          'Zlepšete své dovednosti v míchání koktejlů a přípravě kávy na našich kurzech.',
       },
     ],
   },
@@ -407,38 +361,6 @@ export const categories = [
     ],
   },
   {
-    type: 'Dárky pro muže',
-    headline: 'Dárky pro muže v Praze',
-    url: 'darky-pro-muze-v-praze',
-    description:
-      'Vyberte perfektní dárek pro muže z naší široké nabídky v Praze.',
-    subtypes: [
-      {
-        subtype: 'Dárky pro muže',
-        headline: 'Dárky pro muže v Praze',
-        url: 'darky-pro-muze-v-praze',
-        description:
-          'Najděte perfektní dárek pro muže v Praze z naší široké nabídky originálních dárků.',
-      },
-    ],
-  },
-  {
-    type: 'Pánská jízda',
-    headline: 'Pánská jízda v Praze',
-    url: 'panska-jizda-v-praze',
-    description:
-      'Užijte si nezapomenutelnou pánskou jízdu s našimi speciálními aktivitami v Praze.',
-    subtypes: [
-      {
-        subtype: 'Pánská jízda',
-        headline: 'Pánská jízda v Praze',
-        url: 'panska-jizda-v-praze',
-        description:
-          'Užijte si nezapomenutelnou pánskou jízdu v Praze s našimi speciálními aktivitami.',
-      },
-    ],
-  },
-  {
     type: 'Pobyty',
     headline: 'Pobyty v Praze',
     url: 'pobyty-v-praze',
@@ -499,34 +421,11 @@ export const categories = [
     ],
   },
   {
-    type: 'Virtuální realita',
-    headline: 'Virtuální realita v Praze',
-    url: 'virtualni-realita-v-praze',
-    description: 'Zažijte svět virtuální reality s našimi zážitky v Praze.',
-    subtypes: [
-      {
-        subtype: 'Virtuální realita',
-        headline: 'Virtuální realita v Praze',
-        url: 'virtualni-realita-v-praze',
-        description:
-          'Prožijte nezapomenutelné zážitky ve světě virtuální reality v Praze.',
-      },
-    ],
-  },
-  {
-    type: 'Army',
-    headline: 'Army zážitky v Praze',
-    url: 'army-zazitky-v-praze',
+    type: 'Ostatní',
+    headline: 'Zážitky v Praze',
+    url: 'zazitky-v-praze',
     description:
-      'Vyzkoušejte vojenské simulace a tréninky s našimi army zážitky v Praze.',
-    subtypes: [
-      {
-        subtype: 'Army',
-        headline: 'Army zážitky v Praze',
-        url: 'army-zazitky-v-praze',
-        description:
-          'Zažijte vojenské simulace a tréninky s našimi army zážitky v Praze.',
-      },
-    ],
+      'Zážitky Praze.',
+    subtypes: [],
   },
 ];
