@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 type ImageGalleryProps = {
   images: string[];
@@ -10,6 +10,26 @@ type ImageGalleryProps = {
 const ImageGallery = ({ images }: ImageGalleryProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (isOpen) {
+        if (event.key === 'ArrowRight') {
+          nextImage();
+        } else if (event.key === 'ArrowLeft') {
+          prevImage();
+        } else if (event.key === 'Escape') {
+          closeModal();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, currentIndex]);
 
   const openModal = (index: number) => {
     setCurrentIndex(index);
@@ -43,7 +63,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: '100%', height: 'auto' }}
               className="object-cover w-full h-32 sm:h-40 md:h-48 rounded-lg shadow-md"
             />
           </div>
@@ -64,11 +84,11 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             </button>
             <Image
               src={images[currentIndex]}
-              alt={"alt"}
+              alt={'alt'}
               width={0}
               height={0}
               sizes="100vw"
-              style={{ height: "auto" }}
+              style={{ height: 'auto' }}
               className="w-full min-w-95vw md:min-w-[800px] max-h-screen object-contain rounded-lg"
             />
             <button
