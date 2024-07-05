@@ -5,7 +5,7 @@ interface CategoryCardProps {
   link: string;
 }
 
-const CategoryCard = ({ title, link }: CategoryCardProps) => {
+const CategoryLinkCard = ({ title, link }: CategoryCardProps) => {
   return (
     <a
       href={link}
@@ -18,4 +18,4 @@ const CategoryCard = ({ title, link }: CategoryCardProps) => {
   );
 };
 
-export default CategoryCard;
+export default CategoryLinkCard;

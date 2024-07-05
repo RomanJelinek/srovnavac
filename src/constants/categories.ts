@@ -10,6 +10,63 @@ const allowedTypes = [
   'Adrenalin',
 ];
 
+export const homepageCategories = [
+  {
+    id: 1,
+    title: 'Auto-moto',
+    description: 'Pro milovníky rychlosti a adrenalinu nabízíme různé auto-moto zážitky. Vyzkoušejte si jízdu v supersportovních vozech jako Ferrari nebo Lamborghini, které vám poskytnou nezapomenutelný zážitek z rychlosti a výkonu. Pro ty, kteří preferují terénní dobrodružství, máme off-road výlety, kde si můžete vyzkoušet jízdu v náročných podmínkách. Navíc nabízíme kurzy bezpečné jízdy a rally zážitky pro ty, kteří chtějí zlepšit své řidičské dovednosti a zažít adrenalinový zážitek za volantem.',
+    link: '#auto-moto',
+  },
+  {
+    id: 2,
+    title: 'Sport',
+    description: 'Vyzkoušejte si různé sportovní aktivity v Praze, které vás udrží v kondici a zároveň vás pobaví. Od kolektivních sportů, jako je fotbal, basketbal nebo volejbal, až po individuální výzvy, jako je tenis, squash nebo lezení na umělé stěně. Pro milovníky vody nabízíme plavání, paddleboarding nebo kanoistiku na Vltavě. Pokud hledáte něco klidnějšího, vyzkoušejte jógu nebo pilates v některém z mnoha pražských studií. Sportovní aktivity jsou skvělým způsobem, jak strávit čas s přáteli a zároveň udělat něco pro své zdraví.',
+    link: '#sport',
+  },
+  {
+    id: 3,
+    title: 'Vzduch',
+    description: 'Zažijte nezapomenutelné zážitky ve vzduchu s našimi nabídkami vyhlídkových letů, paraglidingu a balonových letů. Vyhlídkové lety nad Prahou vám poskytnou jedinečný pohled na město z ptačí perspektivy, kde můžete obdivovat krásy historických památek a přírodních scenérií. Pro adrenalinové nadšence nabízíme tandemové seskoky padákem nebo paragliding, které vám umožní zažít volný pád a let nad krajinou. Balonové lety jsou skvělou volbou pro romantický výlet, kde si můžete vychutnat klidný let nad Prahou při východu nebo západu slunce.',
+    link: '#vzduch',
+  },
+  {
+    id: 4,
+    title: 'Únikové hry',
+    description: 'Vyzkoušejte různé únikové hry v Praze a ponořte se do světa záhad a hlavolamů. Únikové hry jsou skvělým způsobem, jak otestovat své logické myšlení, týmovou spolupráci a schopnost řešit problémy pod tlakem. Nabízíme širokou škálu témat od historických dobrodružství, přes sci-fi a hororové příběhy, až po detektivní záhady. Každá hra je pečlivě navržena tak, aby vás vtáhla do svého světa a poskytla vám nezapomenutelný zážitek. Únikové hry jsou ideální aktivitou pro rodiny, přátele i firemní teambuildingy.',
+    link: '#unikove-hry',
+  },
+  {
+    id: 5,
+    title: 'Gastronomické zážitky',
+    description: 'Pro milovníky dobrého jídla nabízíme různé gastronomické zážitky v Praze. Navštivte nejlepší restaurace a ochutnejte degustační menu připravené špičkovými šéfkuchaři. Prozkoumejte místní trhy a farmářské trhy, kde můžete ochutnat čerstvé produkty a regionální speciality. Nabízíme také kurzy vaření, kde se můžete naučit připravovat tradiční české pokrmy nebo se zdokonalit v mezinárodní kuchyni. Nezapomeňte navštívit místní kavárny a pekárny, kde si můžete vychutnat vynikající kávu a čerstvé pečivo.',
+    link: '#gastronomicke-zazitky',
+  },
+  {
+    id: 6,
+    title: 'Netradiční',
+    description: 'Objevte netradiční zážitky v Praze, které vás překvapí a zanechají nezapomenutelné vzpomínky. Vyzkoušejte například návštěvu pivovaru a ochutnávku různých druhů piva přímo od mistrů sládků. Nabízíme také jízdu historickými tramvajemi, která vás zavede do minulosti a ukáže vám Prahu z jiného úhlu. Pro milovníky umění máme graffiti a street art tour, kde se seznámíte s nejlepšími pražskými umělci a jejich díly. A co třeba noční prohlídka města s průvodcem, který vám ukáže skrytá místa a povypráví vám tajemné příběhy z historie Prahy?',
+    link: '#netradicni',
+  },
+  {
+    id: 7,
+    title: 'Relax',
+    description: 'Dopřejte si chvíle odpočinku a pohody s našimi relaxačními zážitky v Praze. Nabízíme širokou škálu masáží, wellness a lázeňských procedur, které vám pomohou zrelaxovat tělo i mysl. Navštivte některé z mnoha spa a wellness center, kde si můžete užít sauny, vířivky a bazény. Pro klidné chvíle doporučujeme návštěvu botanických zahrad nebo parků, kde si můžete užít procházky a spojení s přírodou. Yoga a meditace lekce jsou také skvělou volbou pro ty, kteří hledají harmonii a rovnováhu ve svém životě.',
+    link: '#relax',
+  },
+  {
+    id: 8,
+    title: 'Pobyty',
+    description: 'Prozkoumejte naše tipy na pobyty v Praze a okolí, ať už hledáte luxusní hotely, nebo útulné penziony. Praha nabízí širokou škálu ubytování pro každého cestovatele. Doporučujeme například Hotel Kings Court, který nabízí prvotřídní služby a komfort v centru města. Alchymist Grand Hotel and Spa je skvělou volbou pro romantický pobyt díky svým historickým interiérům a wellness centru. Pro mladší cestovatele a páry máme Mosaic House Design Hotel, který je moderní a ekologicky šetrný. A pokud hledáte něco cenově dostupnějšího, Sophie s Hostel je ideální volbou.',
+    link: '#pobyty'
+  },
+  {
+    id: 9,
+    title: 'Adrenalin',
+    description: 'Pro adrenalinové nadšence nabízíme různé extrémní sporty a zážitky, které vám zvýší hladinu adrenalinu. Vyzkoušejte bungee jumping, skydiving nebo ziplining a zažijte pocit volného pádu a rychlosti. Pro ty, kteří mají rádi vodní adrenalin, nabízíme rafting a kayaking na divoké vodě. Můžete si také vyzkoušet horolezectví nebo jízdu na horském kole v náročném terénu. Tyto zážitky jsou ideální pro všechny, kteří hledají vzrušení a nové výzvy.',
+    link: '#adrenalin',
+  },
+];
+
 export const categories = [
   {
     type: 'Auto-moto',

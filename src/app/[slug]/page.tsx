@@ -1,6 +1,6 @@
 import ProductList from '@/components/ProductList';
 import { getCategory } from '../utility/categories';
-import CategoryCard from '@/components/CategoryCard';
+import CategoryLinkCard from '@/components/CategoryLinkCard';
 
 export default async function Category({
   params: { slug },
@@ -17,7 +17,7 @@ export default async function Category({
         <p className="text-gray-600 mb-12">{chosenCategory.description}</p>
         <div className="flex gap-2 mb-12 justify-center flex-wrap">
           {category.subtypes.map((sub) => (
-            <CategoryCard title={sub.headline} link={sub.url} />
+            <CategoryLinkCard title={sub.headline} link={sub.url} />
           ))}
         </div>
         <ProductList
