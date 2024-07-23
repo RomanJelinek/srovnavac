@@ -44,7 +44,12 @@ export default async function ProductPage({
         <div className="col-span-1 flex flex-col justify-between">
           <div>
             <h1 className="text-3xl font-bold mb-4">{product.product_name}</h1>
-            <p className="text-gray-600 mb-4">{product.description}</p>
+            <p
+              className="text-gray-600 mb-4"
+              dangerouslySetInnerHTML={{
+                __html: product.description.replace(/\n/g, "<br />"),
+              }}
+            ></p>
             <div className="flex items-center mb-4">
               <span className="text-xl font-semibold text-gray-900 mr-2">
                 {Number(product.price).toLocaleString("cs-CZ")} Kč
