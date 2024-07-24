@@ -1,4 +1,4 @@
-import ProductList from "@/components/ProductList";
+import ProductList from "@/components/product-list/ProductList";
 import { homepageCategories } from "@/constants/categories";
 import { getProducts } from "@/app/actions/product";
 

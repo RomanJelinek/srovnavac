@@ -1,4 +1,4 @@
-import ProductList from "@/components/ProductList";
+import ProductList from "@/components/product-list/ProductList";
 import { getCategory } from "../utility/categories";
 import CategoryLinkCard from "@/components/CategoryLinkCard";
 import { getProducts } from "@/app/actions/product";
