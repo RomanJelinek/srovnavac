@@ -6,9 +6,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Produktový portál",
+  title: "Co dělat v Praze? Máme pro vás tipy na Zážitky v Praze",
   description:
-    "Srovnáve produkty. Nebo jsme možná kuponový portál? Či cashback portál?",
+    "Objevte nejlepší aktivity v Praze! Průvodce historií, kulturou, gastronomií a zábavou. Najděte ty nejlepší tipy na zážitky v tomto kouzelném městě.",
 };
 
 export default function RootLayout({
