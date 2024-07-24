@@ -1,6 +1,16 @@
-import ProductList from '@/components/ProductList';
-import { getCategory } from '../utility/categories';
-import CategoryLinkCard from '@/components/CategoryLinkCard';
+import ProductList from "@/components/ProductList";
+import { getCategory } from "../utility/categories";
+import CategoryLinkCard from "@/components/CategoryLinkCard";
+
+export async function generateMetadata({ params: { slug } }) {
+  
+  const cat = getCategory(slug);
+    const chosenCategory = cat?.subtype || cat?.category;
+  return {
+    title: chosenCategory.headline,
+    description: chosenCategory.description,
+  };
+}
 
 export default async function Category({
   params: { slug },
@@ -17,7 +27,11 @@ export default async function Category({
         <p className="text-gray-600 mb-12">{chosenCategory.description}</p>
         <div className="flex gap-2 mb-12 justify-center flex-wrap">
           {cat.category.subtypes.map((sub) => (
-            <CategoryLinkCard title={sub.headline} key={sub.url} link={sub.url} />
+            <CategoryLinkCard
+              title={sub.headline}
+              key={sub.url}
+              link={sub.url}
+            />
           ))}
         </div>
         <ProductList
