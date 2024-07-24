@@ -3,6 +3,15 @@ import { getCategory } from "../utility/categories";
 import CategoryLinkCard from "@/components/CategoryLinkCard";
 import { getProducts } from "@/app/actions/product";
 
+export async function generateMetadata({ params: { slug } }) {
+  const cat = getCategory(slug);
+  const chosenCategory = cat?.subtype || cat?.category;
+  return {
+    title: chosenCategory.headline,
+    description: chosenCategory.description,
+  };
+}
+
 export default async function Category({
   params: { slug },
 }: {
