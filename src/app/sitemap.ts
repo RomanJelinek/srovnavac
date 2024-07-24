@@ -1,9 +1,9 @@
 import { MetadataRoute } from "next/types";
-import { getPragueProducts } from "./actions/product";
+import { getProducts } from "./actions/product";
 import { categories } from "@/constants/categories";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const products = await getPragueProducts();
+  const { data: products } = await getProducts({});
 
   const categoryLinks = categories.map((category) => ({
     url: `${process.env.WEB_URL}/${category.url}`,
