@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Co dělat v Praze? Máme pro vás tipy na Zážitky v Praze",
   description:
     "Objevte nejlepší aktivity v Praze! Průvodce historií, kulturou, gastronomií a zábavou. Najděte ty nejlepší tipy na zážitky v tomto kouzelném městě.",
+  alternates: {
+    canonical: "./",
+  },
 };
 
 export default function RootLayout({

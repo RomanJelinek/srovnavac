@@ -68,6 +68,7 @@ export default async function ProductPage({
             </div>
             <Link
               href={`https://ehub.cz/system/scripts/click.php?a_aid=dc43257d&a_bid=0001595B&desturl=${product.url}`}
+              target="_blank"
             >
               <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 mt-4">
                 Objednat
