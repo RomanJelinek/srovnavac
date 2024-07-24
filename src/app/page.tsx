@@ -1,7 +1,13 @@
-import ProductList from '@/components/ProductList';
-import { homepageCategories } from '@/constants/categories';
+import ProductList from "@/components/product-list/ProductList";
+import { homepageCategories } from "@/constants/categories";
+import { getProducts } from "@/app/actions/product";
 
 export default async function Home() {
+  const { data: initialProducts, count: totalProducts } = await getProducts({
+    start: 0,
+    end: 9,
+  });
+
   return (
     <>
       <header className="py-6">
@@ -59,10 +65,11 @@ export default async function Home() {
             </section>
           </main>
         </div>
-        <h1 className="text-4xl font-bold text-center mb-6">
-          Zážitky v Praze
-        </h1>
-        <ProductList />
+        <h1 className="text-4xl font-bold text-center mb-6">Zážitky v Praze</h1>
+        <ProductList
+          initialProducts={initialProducts}
+          totalProducts={totalProducts}
+        />
       </main>
     </>
   );
