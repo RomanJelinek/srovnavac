@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard";
 import { getProducts } from "@/app/actions/product";
 import { Product } from "@/libs/supabase/supabase.types";
 import { useState } from "react";
+import TriggerLoading from "./TriggerLoading";
 
 type ProductListProps = {
   filters?: {
@@ -46,15 +47,10 @@ const ProductList = ({
           <ProductCard product={product} key={product.id} />
         ))}
       </div>
-      {products.length < totalProducts && (
-        <button
-          onClick={loadMore}
-          disabled={loading}
-          className="mt-12 inline-flex h-full items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Načíst další zážitky
-        </button>
+      {products.length < totalProducts && !loading && (
+        <TriggerLoading loadMore={loadMore} />
       )}
+      {loading && <div className='text-center'>Načítání...</div>}
     </>
   );
 };
