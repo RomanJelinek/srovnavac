@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
   },
-  other: {
-    "google-site-verification": "3Nd7Utfql33iA-ffbLFqal4t2QqrhIifGq7TAa60Yfg",
-  },
 };
 
 export default function RootLayout({
