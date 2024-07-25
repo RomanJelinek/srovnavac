@@ -8,6 +8,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/files/fotos/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'alis.zazitky.cz',
+                port: '',
+                pathname: '/data/images/**',
+            },
         ],
     },
 };
