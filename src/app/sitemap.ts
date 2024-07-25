@@ -12,7 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const productPages = products.map((product) => ({
     url: `${process.env.WEB_URL}/product/${product.id}`,
-    lastModified: product.updated_at,
+    lastModified: new Date(product.updated_at),
   }));
   return [...categoryLinks, ...productPages];
 }
