@@ -18,4 +18,16 @@ export type Product = {
   city: string;
   type: string;
   subtype: string;
+  exp_prg_variants: Variant[];
 };
+
+export type Variant = {
+  id: string;
+  product_id: string;
+  variant_id: string;
+  product_name_ext?: string;
+  price?: number;
+  price_vat?: number,
+  location?: string,
+  updated_at: string;
+}
