@@ -13,7 +13,7 @@ export async function generateMetadata({
   const product = await getPragueProductById(id);
 
   return {
-    title: product.product,
+    title: `${product.product} Praha`,
     keywords: [product.type, product.subtype, product.product, "Praha"],
     openGraph: {
       images: [...product.images],
@@ -35,7 +35,7 @@ export default async function ProductPage({
         <div className="col-span-1">
           <Image
             src={product.image}
-            alt={product.product_name}
+            alt={product.product}
             width={600}
             height={600}
             className="rounded-lg"
@@ -43,7 +43,7 @@ export default async function ProductPage({
         </div>
         <div className="col-span-1 flex flex-col justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-4">{product.product_name}</h1>
+            <h1 className="text-3xl font-bold mb-4">{product.product} Praha</h1>
             <p
               className="text-gray-600 mb-4"
               dangerouslySetInnerHTML={{
