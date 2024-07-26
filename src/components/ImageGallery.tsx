@@ -63,8 +63,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              className="object-cover w-full h-32 sm:h-40 md:h-48 rounded-lg shadow-md"
+              className="object-cover w-40 h-40 sm:h-48 sm:w-48 md:h-56 md:w-56 rounded-lg shadow-md"
             />
           </div>
         ))}
