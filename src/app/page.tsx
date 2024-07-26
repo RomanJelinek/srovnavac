@@ -47,12 +47,14 @@ export default async function Home() {
                 {homepageCategories.map((category) => (
                   <div
                     key={category.id}
-                    className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5"
+                    className="w-full flex flex-col justify-between max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700 p-5"
                   >
-                    <h3 className="text-2xl font-semibold mb-2">
+                    <div className="flex flex-col">
+                    <h3 className="text-2xl text-stone-900 font-semibold mb-2">
                       {category.title}
                     </h3>
-                    <p className="mb-4">{category.description}</p>
+                    <p className="mb-4 text-stone-900 text-justify">{category.description}</p>
+                    </div>
                     <a
                       href={category.link}
                       className="text-blue-600 hover:underline"
