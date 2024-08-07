@@ -419,6 +419,13 @@ export const categories = [
           "Objevte hlubokou relaxaci a harmonii s tantrickými masážemi v Praze. Naše tantrické masáže vám umožní zažít jedinečný zážitek, který kombinuje relaxaci těla i mysli. Ať už hledáte způsob, jak si odpočinout po náročném dni, nebo chcete vyzkoušet něco nového a vzrušujícího, naše tantrické masáže jsou tu pro vás. Připravte se na nezapomenutelné chvíle plné klidu a pohody, které vám umožní znovu načerpat energii a užít si krásy Prahy.",
       },
       {
+        subtype: "Thajské masáže",
+        headline: "Thajské masáže v Praze",
+        url: "thajske-masaze-v-praze",
+        description:
+          "Objevte hlubokou relaxaci a harmonii s tantrickými masážemi v Praze. Naše thajské masáže vám umožní zažít jedinečný zážitek, který kombinuje relaxaci těla i mysli. Ať už hledáte způsob, jak si odpočinout po náročném dni, nebo chcete vyzkoušet něco nového a vzrušujícího, naše thajské masáže jsou tu pro vás. Připravte se na nezapomenutelné chvíle plné klidu a pohody, které vám umožní znovu načerpat energii a užít si krásy Prahy.",
+      },
+      {
         subtype: "Relaxační masáže",
         headline: "Relaxační masáže v Praze",
         url: "relaxacni-masaze-v-praze",
